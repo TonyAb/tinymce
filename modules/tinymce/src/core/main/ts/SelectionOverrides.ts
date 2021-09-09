@@ -214,8 +214,8 @@ const SelectionOverrides = (editor: Editor): SelectionOverrides => {
           if (!hasBetterMouseTarget(targetElm, fakeCaretInfo.node)) {
             e.preventDefault();
             const range = showCaret(1, fakeCaretInfo.node as HTMLElement, fakeCaretInfo.before, false);
-            editor.getBody().focus();
             setRange(range);
+            editor.getBody().focus();
           }
         }
       }
